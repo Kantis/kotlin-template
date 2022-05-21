@@ -7,35 +7,25 @@ plugins {
     kotlin("jvm") version "1.6.21"
 }
 
-tasks.named<Wrapper>("wrapper") {
-    gradleVersion = "7.4"
-    distributionType = Wrapper.DistributionType.ALL
+repositories {
+    mavenCentral()
 }
 
 dependencies {
-    testImplementation(Testing.kotest.runner.junit5)
-    testImplementation(Testing.kotest.property)
+    testImplementation(libs.kotest.runner.junit5)
+    testImplementation(libs.kotest.property)
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = targetJdk.toString()
     }
+}
 
-    tasks.withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = targetJdk.toString()
+testing {
+    suites {
+        val tests by creating(JvmTestSuite::class) {
+            useJUnitJupiter()
         }
-    }
-
-    plugins.withType<JavaPlugin> {
-        extensions.configure<JavaPluginExtension> {
-            sourceCompatibility = targetJdk
-            targetCompatibility = targetJdk
-        }
-    }
-
-    tasks.withType<Test> {
-        useJUnitPlatform()
     }
 }
