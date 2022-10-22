@@ -22,10 +22,6 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-testing {
-    suites {
-        val tests by creating(JvmTestSuite::class) {
-            useJUnitJupiter()
-        }
-    }
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
