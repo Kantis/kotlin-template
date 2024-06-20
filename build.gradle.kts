@@ -1,7 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
-// Note: AWS supports only JDK 11 for Lambdas so far
-val targetJdk = JavaVersion.VERSION_17
 
 plugins {
     kotlin("jvm") version "2.0.0"
@@ -16,9 +14,9 @@ dependencies {
     testImplementation(libs.kotest.property)
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = targetJdk.toString()
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
