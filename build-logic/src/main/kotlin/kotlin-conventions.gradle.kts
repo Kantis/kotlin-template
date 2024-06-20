@@ -32,12 +32,8 @@ kotlin {
       languageVersion.set(JavaLanguageVersion.of(21))
    }
 
-   target {
-      compilations.configureEach {
-         compilerOptions.configure {
-            freeCompilerArgs.addAll(listOf("-Xcontext-receivers"))
-         }
-      }
+   compilerOptions {
+      freeCompilerArgs.add("-Xcontext-receivers")
    }
 }
 
