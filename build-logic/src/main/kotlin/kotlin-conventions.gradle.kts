@@ -19,7 +19,7 @@ detekt {
 }
 
 configure<KtlintExtension> {
-   version.set("1.3.0")
+   version.set("1.6.0")
    filter {
       exclude {
          it.file.path.contains("generated")

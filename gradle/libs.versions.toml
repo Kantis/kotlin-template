@@ -1,6 +1,6 @@
 [versions]
-kotlin = "2.0.0"
-kotest = "5.9.0"
+kotlin = "2.2.0"
+kotest = "6.0.0.M4"
 
 [libraries]
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
@@ -11,7 +11,7 @@ kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 kotlin-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 ktlint-gradle = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "13.0.0" }
 testlogger-gradle = { module = "com.adarshr:gradle-test-logger-plugin", version = "4.0.0" }
-detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.6" }
+detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.8" }
 
 [bundles]
 
