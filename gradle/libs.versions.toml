@@ -9,7 +9,7 @@ kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest"
 # Gradle plugins (for buildSrc)
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-ktlint-gradle = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "13.0.0" }
+ktlint-gradle = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "13.1.0" }
 testlogger-gradle = { module = "com.adarshr:gradle-test-logger-plugin", version = "4.0.0" }
 detekt-gradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.8" }
 
